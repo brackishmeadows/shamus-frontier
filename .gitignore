@@ -1,0 +1,22 @@
+
+##brackish added
+*.github/*
+
+# Visual Studio
+*.vs/*
+*.VC.db
+*.VC.opendb
+*.ipch/
+
+# Build outputs
+*Debug/
+*Release/
+
+# MSVC artifacts
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.tlog
+*.log
+*.lastbuildstate
