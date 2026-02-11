@@ -1,7 +1,7 @@
 
 ##brackish added
 .github/*
-
+.github
 # Visual Studio
 .vs/
 ipch/
