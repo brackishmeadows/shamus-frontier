@@ -1,12 +1,13 @@
 
 ##brackish added
-*.github/*
+.github/*
 
 # Visual Studio
-*.vs/*
+.vs/
+ipch/
+*.ipch
 *.VC.db
 *.VC.opendb
-*.ipch/
 
 # Build outputs
 *Debug/

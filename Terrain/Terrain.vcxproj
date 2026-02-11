@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A1163D2D-59A7-4B3E-9DBE-5DFE09E0A7F2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Terrain</RootNamespace>
+    <ProjectName>Frontier</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
+    <LibraryPath>H:\SDK\devIL\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>H:\SDK\devIL\include;H:\SDK\glConsole;H:\SDK\Cg\include;$(IncludePath)</IncludePath>
+    <LibraryPath>H:\SDK\devIL\lib;H:\SDK\Cg\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\GLConsole;$(ProjectDir)\freeglut\include;$(ProjectDir)\SDL-1.2.15\include;$(ProjectDir)Cg\include;$(ProjectDir)devIL\include;$(ProjectDir)\GLConsole;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Cg\lib;$(ProjectDir)DevIL\lib;$(ProjectDir)freeglut\lib;;$(ProjectDir)SDL-1.2.15\lib;H:\SDK\SDL\lib;H:\SDK\Cg\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);freeglut.lib;SDL.lib;SDLmain.lib;cg.lib;cgGL.lib;DevIL.lib;ILU.lib;ILUT.lib;</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\Source\SDK\SDL\include;$(ProjectDir)\GLConsole;$(ProjectDir)\freeglut\include;$(ProjectDir)\SDL-1.2.15\include;$(ProjectDir)Cg\include;$(ProjectDir)devIL\include;C:\SDK\DevIL\include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)Cg\lib;$(ProjectDir)DevIL\lib;$(ProjectDir)freeglut\lib;;$(ProjectDir)SDL-1.2.15\lib;C:\Work\SDK\SDL\lib;H:\SDK\glConsole\lib\Release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);freeglut.lib;SDL.lib;SDLmain.lib;cg.lib;cgGL.lib;DevIL.lib;ILU.lib;ILUT.lib;</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Avatar.cpp" />
+    <ClCompile Include="Cache.cpp" />
+    <ClCompile Include="CAnim.cpp" />
+    <ClCompile Include="CBrush.cpp" />
+    <ClCompile Include="CEmitter.cpp" />
+    <ClCompile Include="CFigure.cpp" />
+    <ClCompile Include="CForest.cpp" />
+    <ClCompile Include="Cg.cpp" />
+    <ClCompile Include="CGrass.cpp" />
+    <ClCompile Include="CGrid.cpp" />
+    <ClCompile Include="Console.cpp" />
+    <ClCompile Include="CPage.cpp" />
+    <ClCompile Include="CParticleArea.cpp" />
+    <ClCompile Include="CTerrain.cpp" />
+    <ClCompile Include="CTree.cpp" />
+    <ClCompile Include="Entropy.cpp" />
+    <ClCompile Include="Env.cpp" />
+    <ClCompile Include="Figure.cpp" />
+    <ClCompile Include="File.cpp" />
+    <ClCompile Include="FileImage.cpp" />
+    <ClCompile Include="FileX.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="glBbox.cpp" />
+    <ClCompile Include="GLConsole\CVars\CVar.cpp" />
+    <ClCompile Include="GLConsole\CVars\CVarParse.cpp" />
+    <ClCompile Include="GLConsole\CVars\cvars_tinyxml.cpp" />
+    <ClCompile Include="GLConsole\CVars\cvars_tinyxmlerror.cpp" />
+    <ClCompile Include="GLConsole\CVars\cvars_tinyxmlparser.cpp" />
+    <ClCompile Include="GLConsole\CVars\Timestamp.cpp" />
+    <ClCompile Include="GLConsole\CVars\Trie.cpp" />
+    <ClCompile Include="GLConsole\CVars\TrieNode.cpp" />
+    <ClCompile Include="glCoord.cpp" />
+    <ClCompile Include="glFont.cpp" />
+    <ClCompile Include="glMatrix.cpp" />
+    <ClCompile Include="glMesh.cpp" />
+    <ClCompile Include="glRgba.cpp" />
+    <ClCompile Include="glUvbox.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="Region.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Sky.cpp" />
+    <ClCompile Include="Terraform.cpp" />
+    <ClCompile Include="Text.cpp" />
+    <ClCompile Include="glVector2.cpp" />
+    <ClCompile Include="glVector3.cpp" />
+    <ClCompile Include="Ini.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Math.cpp" />
+    <ClCompile Include="Render.cpp" />
+    <ClCompile Include="Sdl.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="VBO.cpp" />
+    <ClCompile Include="Water.cpp" />
+    <ClCompile Include="World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Avatar.h" />
+    <ClInclude Include="Cache.h" />
+    <ClInclude Include="Canim.h" />
+    <ClInclude Include="CBrush.h" />
+    <ClInclude Include="CEmitter.h" />
+    <ClInclude Include="CFigure.h" />
+    <ClInclude Include="CForest.h" />
+    <ClInclude Include="Cg.h" />
+    <ClInclude Include="CGrass.h" />
+    <ClInclude Include="CGrid.h" />
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="Cpage.h" />
+    <ClInclude Include="CParticleArea.h" />
+    <ClInclude Include="CTerrain.h" />
+    <ClInclude Include="CTree.h" />
+    <ClInclude Include="Entropy.h" />
+    <ClInclude Include="Env.h" />
+    <ClInclude Include="Figure.h" />
+    <ClInclude Include="File.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="glTypes.h" />
+    <ClInclude Include="Ini.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="Math.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="Region.h" />
+    <ClInclude Include="Render.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Sdl.h" />
+    <ClInclude Include="Sky.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="Terraform.h" />
+    <ClInclude Include="Text.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="VBO.h" />
+    <ClInclude Include="Water.h" />
+    <ClInclude Include="World.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".github\copilot-instructions.md" />
+    <None Include="Player.h" />
+    <None Include="Shaders\standard.cg" />
+    <None Include="Shaders\trees.cg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="GLConsole\CVars\CMakeLists.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
