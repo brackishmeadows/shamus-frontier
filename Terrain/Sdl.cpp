@@ -112,7 +112,10 @@ void SdlUpdate ()
     case SDL_KEYDOWN:
       if (event.key.keysym.sym == SDLK_ESCAPE)
         MainQuit ();
-      if (event.key.keysym.sym == SDLK_BACKQUOTE) {
+      if (event.key.keysym.sym == SDLK_BACKQUOTE ||
+          event.key.keysym.sym == SDLK_F1 ||
+          event.key.keysym.unicode == '`' ||
+          event.key.keysym.unicode == '~') {
         ConsoleToggle ();      
         break;
       }
